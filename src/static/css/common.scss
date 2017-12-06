@@ -1,0 +1,33 @@
+@charset "utf-8";
+// scss公共方法
+@mixin prefix($property, $value) {
+  /* 内核前缀添加 */
+  -moz-#{$property}:$value;
+  -webkit-#{$property}:$value;
+  -o-#{$property}:$value;
+  #{$property}:$value;
+}
+@mixin txtOverflow($lineNumber:2){
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; //* 对象作为伸缩盒子模型显示 *
+  -webkit-box-orient: vertical; //* 设置或检索伸缩盒对象的子元素的排列方式 *
+  -webkit-line-clamp: $lineNumber; //* 显示的行数 *
+  overflow: hidden; //* 隐藏超出的内容 *
+}
+@mixin flexDiv() {
+  /*flex伸缩模型父盒子*/
+  display: -webkit-box; /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box; /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox; /* 混合版本语法: IE 10 */
+  display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+  display: flex; /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+@mixin flexChild($n:1) {
+  /*flex伸缩模型子盒子*/
+  -webkit-box-flex: $n;      /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: $n;         /* OLD - Firefox 19- */
+  -webkit-flex: $n;          /* Chrome */
+  -ms-flex: $n;              /* IE 10 */
+  flex: $n;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
