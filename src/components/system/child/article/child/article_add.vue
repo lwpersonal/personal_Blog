@@ -106,6 +106,7 @@ export default {
 }
 </script>
 
+
 <style lang="stylus" scoped>
 @import '../../../../../static/css/common.styl'
 .flexB
