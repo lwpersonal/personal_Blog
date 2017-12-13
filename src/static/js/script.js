@@ -2,7 +2,7 @@
  * @Author: AI 
  * @Date: 2017-04-06 13:51:58 
  * @Last Modified by: AI
- * @Last Modified time: 2017-06-08 21:01:14
+ * @Last Modified time: 2017-12-13 17:00:49
  */
 const judgeBrowser = () => {
   /**
